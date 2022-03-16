@@ -8,7 +8,7 @@ from sklearn.pipeline import Pipeline
 import pandas as pd
 
 
-def init_predict_handler(tag: str = "") -> Callable[[flask.Request], Any]:
+def init_predict_handler(tag: str = "_example") -> Callable[[flask.Request], Any]:
 
     model: Pipeline = joblib.load(f"artifacts/pipeline{tag}.joblib")
     statuses = {0: "clear", 1: "heart-disease"}
