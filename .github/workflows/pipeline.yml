@@ -27,9 +27,6 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
     
-    - name: Download the latest dataset
-      run: |
-        gsutil cp gs://pipeline-example/heart-disease/dataset.csv datasets/default.csv
 
     - name: Run training task
       run: |
