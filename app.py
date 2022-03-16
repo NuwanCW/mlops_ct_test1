@@ -1,4 +1,4 @@
-
+# simple app- api to get predictions
 import flask
 from main import predict_handler
 
