@@ -4,8 +4,8 @@ on:
   push:
     branches:
       - master
-  schedule:
-    - cron:  '0 8 * * MON-FRI'
+#  schedule:
+#    - cron:  '0 8 * * MON-FRI'
 
 jobs:
   train:
