@@ -18,7 +18,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, roc_auc_score
 
 
-np.random.seed(422)
+np.random.seed(122)
 
 TIMESTAMP_FMT = "%m-%d-%Y, %H:%M:%S"
 
