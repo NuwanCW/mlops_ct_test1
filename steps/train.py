@@ -18,7 +18,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, roc_auc_score
 
 
-np.random.seed(122)
+np.random.seed(12)
 
 TIMESTAMP_FMT = "%m-%d-%Y, %H:%M:%S"
 
@@ -69,7 +69,7 @@ def create_pipeline(
 
 def train(
     path: str,
-    test_size: float = 0.25,
+    test_size: float = 0.2,
     tag: str = "",
     dump: bool = True,
     categorical_features: Optional[List[str]] = None,
