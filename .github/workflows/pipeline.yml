@@ -29,7 +29,7 @@ jobs:
     
     - name: Download the latest dataset
       run: |
-        gsutil cp gs://data-1117/heart-disease/dataset.csv datasets/default.csv
+        gsutil cp gs://test2_project/heart-disease/dataset.csv datasets/default.csv
         
     - name: Run training task
       run: |
@@ -37,9 +37,9 @@ jobs:
 
     - name: Upload new model and associated metrics
       run: |
-        gsutil cp artifacts/pipeline.joblib gs://data-1117/heart-disease/models/latest.joblib
-        gsutil cp artifacts/pipeline.joblib gs://data-1117/heart-disease/models/${{ env.GITHUB_RUN_ID }}.joblib
-        gsutil cp artifacts/metrics.json gs://data-1117/heart-disease/models/metrics/${{ env.GITHUB_RUN_ID }}.joblib
+        gsutil cp artifacts/pipeline.joblib gs://test2_project/heart-disease/models/latest.joblib
+        gsutil cp artifacts/pipeline.joblib gs://test2_project/heart-disease/models/${{ env.GITHUB_RUN_ID }}.joblib
+        gsutil cp artifacts/metrics.json gs://test2_project/heart-disease/models/metrics/${{ env.GITHUB_RUN_ID }}.joblib
 
     - name: Deploy model as Cloud Function
       run: | 
